@@ -24,7 +24,7 @@ SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 class Base(DeclarativeBase):
     pass
 
-# Modelo de dados do SQLAlchemy para a tabela `usuarios`
+# Modelo de dados do SQLAlchemy para a tabela `jogadores`
 class JogadorDB(Base):
     __tablename__ = "jogadores"
     id_jogador = Column(Integer, primary_key=True, index=True)

@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: #007bff;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+nav {
+    margin: 10px 0;
+}
+
+button {
+    margin: 0 10px;
+    padding: 10px;
+    border: none;
+    background: #0056b3;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #004494;
+}
+
+#search {
+    margin-top: 10px;
+    padding: 10px;
+    width: 80%;
+}
+
+#player-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.player-card {
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px;
+    width: 200px;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+}
+
+.player-card h3 {
+    margin: 0 0 10px;
+}
