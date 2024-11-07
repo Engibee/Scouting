@@ -3,21 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scouting de Jogadores</title>
+    <title>Operscout</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Scouting de Jogadores</h1>
-        <nav>
-            <button id="futebol">Futebol</button>
-            <button id="basquete">Basquete</button>
-        </nav>
+        <h1>Operscout</h1>
+        <div id="filter-buttons">
+            <button id="futebol">
+                <img src="img/futebol.png" alt="Futebol" class="sport-icon">
+            </button>
+            <button id="basquete">
+                <img src="img/basquete.png" alt="Basquete" class="sport-icon">
+            </button>
+        </div>
+        
         <input type="text" id="search" placeholder="Pesquisar por nome...">
     </header>
+    <div id="team-filter-container">
+        <select id="team-filter">
+            <option value="">Todos os Times</option>
+        </select>
+    </div>
     <main id="player-list">
         <!-- Jogadores serão exibidos aqui -->
     </main>
+    <div id="pagination" style="display: flex; justify-content: center; gap: 10px; margin-top: 20px;"></div>
+
     <script src="script.js"></script>
 </body>
 </html>

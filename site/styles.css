@@ -1,57 +1,156 @@
+/* Define uma paleta de cores verde e laranja */
+:root {
+    --primary-color: #2e8b57; /* Verde escuro */
+    --secondary-color: #ff8c00; /* Laranja escuro */
+    --text-color: #ffffff; /* Branco */
+    --background-color: #f0f0f0; /* Cinza claro */
+}
+
 body {
     font-family: Arial, sans-serif;
+    background-image: url('img/fundo.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Mantém o fundo fixo ao rolar */
+    background-repeat: no-repeat;
+    color: var(--text-color);
+    text-align: center;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    overflow-x: hidden; /* Impede rolagem horizontal */
 }
 
-header {
-    background: #007bff;
-    color: white;
-    padding: 10px;
-    text-align: center;
+
+/* Estilo para o título */
+h1 {
+    color: var(--primary-color);
+    margin-top: 20px;
 }
 
-nav {
-    margin: 10px 0;
-}
-
+/* Estilo para os botões de esporte */
 button {
-    margin: 0 10px;
-    padding: 10px;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 10px 20px;
+    margin: 10px;
     border: none;
-    background: #0056b3;
-    color: white;
+    border-radius: 5px;
     cursor: pointer;
+    font-size: 16px;
 }
 
 button:hover {
-    background: #004494;
+    background-color: var(--secondary-color);
 }
 
+/* Estilo para o campo de pesquisa */
 #search {
-    margin-top: 10px;
     padding: 10px;
     width: 80%;
+    max-width: 300px;
+    margin: 20px auto;
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
 }
 
+/* Estilo para o filtro de times (dropdown) */
+#team-filter {
+    padding: 10px;
+    width: 80%;
+    max-width: 200px;
+    margin: 20px auto;
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    font-size: 16px;
+    text-align: center;
+    appearance: none; /* Remove o estilo padrão do select */
+}
+
+/* Centralizar e estilizar a área do filtro */
+#team-filter-container {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+/* Contêiner dos cartões de jogadores para exibir lado a lado */
 #player-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 15px;
     padding: 20px;
 }
 
+/* Estilo para os cartões de jogadores */
 .player-card {
-    background: white;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 15px;
-    margin: 10px;
-    width: 200px;
-    box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px; /* Define a largura dos cartões */
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.player-card h3 {
-    margin: 0 0 10px;
+.player-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.player-photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.player-name {
+    font-size: 1.5em;
+    color: var(--secondary-color);
+}
+
+.player-info p {
+    margin: 5px 0;
+}
+
+/* Estilo para o botão de "Mostrar mais informações" */
+.info-toggle {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+    width: 100%;
+    text-align: center;
+}
+
+.info-toggle:hover {
+    background-color: var(--primary-color);
+}
+
+.additional-info {
+    margin-top: 10px;
+}
+
+/* Layout responsivo */
+@media (max-width: 768px) {
+    #player-list {
+        flex-direction: column; /* Empilha os cartões em telas menores */
+        align-items: center;
+    }
+
+    .player-card {
+        width: 90%;
+    }
+
+    button, #search, #team-filter {
+        width: 90%;
+        font-size: 14px;
+    }
 }
